@@ -15,6 +15,8 @@ import com.irfan.payment.dto.ResponseMsg;
 import com.irfan.payment.entity.Payment;
 import com.irfan.payment.service.PaymentService;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 public class PaymentController {
 
@@ -28,6 +30,7 @@ public class PaymentController {
 		return "Payment API";
 	}
 
+	@ApiOperation(value = "Create Payment Interface")
 	@PostMapping("/payments")
 	public ResponseMsg createPayment(@RequestBody Payment request) {
 		ResponseMsg respMsg = paymentService.createPayment(request.getCartNo(), request.getCustNo());

@@ -1,5 +1,7 @@
 package com.irfan.payment.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,4 +35,10 @@ public class Cart {
 
 	@Column(name = "qty", nullable = false)
 	private int qty;
+
+	@Column(name = "created_date", nullable = false)
+	private Date createdDate;
+
+	@Column(name = "modified_date", nullable = false)
+	private Date modifiedDate;
 }

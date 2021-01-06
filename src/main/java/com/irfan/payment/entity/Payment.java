@@ -41,4 +41,10 @@ public class Payment {
 
 	@Column(name = "trx_date", nullable = false)
 	private Date trxDate;
+
+	@Column(name = "created_date", nullable = false)
+	private Date createdDate;
+
+	@Column(name = "modified_date", nullable = false)
+	private Date modifiedDate;
 }
